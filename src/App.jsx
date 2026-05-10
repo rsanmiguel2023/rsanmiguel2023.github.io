@@ -11,67 +11,126 @@ import {
 
 export default function App() {
   const skills = {
-    "Data & BI": ["Python", "SQL", "Power BI", "Tableau", "Excel", "Pandas", "NumPy", "Matplotlib"],
-    "Analytics": ["Predictive Modeling", "EDA", "Feature Engineering", "Forecasting", "Optimization", "Business Impact"],
-    "Engineering": ["BigQuery", "Airflow", "Google Cloud Platform", "Data Validation", "ETL/ELT", "Workflow Debugging"],
-    "IT & Systems": ["Microsoft 365", "Intune", "Defender", "Active Directory", "Endpoint Management", "Infrastructure"],
-    "Tools": ["GitHub", "Bitbucket", "Streamlit", "VS Code", "Google Colab", "Jupyter", "OR-Tools", "JIRA"]
+    "Enterprise Infrastructure": [
+      "Windows Server",
+      "Active Directory",
+      "Entra ID",
+      "Microsoft 365",
+      "Exchange Online",
+      "IIS",
+      "SQL Server",
+      "VPN",
+      "DNS",
+      "DHCP",
+      "Hybrid Infrastructure"
+    ],
+    "Identity & Access Management": [
+      "RBAC",
+      "User Provisioning",
+      "Deprovisioning",
+      "Access Reviews",
+      "Security Groups",
+      "Least Privilege",
+      "Identity Governance",
+      "Permission Management"
+    ],
+    "Cybersecurity & Governance": [
+      "Microsoft Defender",
+      "Firewall Administration",
+      "Endpoint Protection",
+      "Security Policies",
+      "Patch Management",
+      "Audit Support",
+      "Vulnerability Mitigation",
+      "Security Awareness"
+    ],
+    "ERP & Business Systems": [
+      "SAP ERP ECC 6.0",
+      "FI/CO/MM/WM/PS/BW/RE-FX",
+      "Workflow Analysis",
+      "Requirements Gathering",
+      "Stakeholder Coordination",
+      "Business Process Improvement",
+      "Documentation & Training"
+    ],
+    "Data & Analytics": [
+      "Python",
+      "SQL",
+      "BigQuery",
+      "Apache Airflow",
+      "Power BI",
+      "Excel",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "scikit-learn"
+    ],
+    "Cloud & Tools": [
+      "Google Cloud Platform",
+      "GitHub",
+      "Bitbucket",
+      "Streamlit",
+      "VS Code",
+      "Jupyter",
+      "JIRA",
+      "Google Colab"
+    ]
   };
 
   const projects = [
     {
-      title: "Toronto Bike Sharing Analysis",
-      category: "Data Analysis • Streamlit",
-      tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Streamlit"],
-      description: "Analyzed Toronto bike sharing patterns to identify demand trends, usage behavior, and operational insights.",
-      impact: "Identified peak demand windows and weather-driven usage patterns to support resource allocation and improve service availability.",
-      github: "https://github.com/rsanmiguel2023/torontobikesharinganalysis",
-      live: "https://torontobikesharinganalysis.streamlit.app/"
-    },
-    {
-      title: "Tesla PESTEL Dashboard",
-      category: "Business Analysis • Dashboard",
-      tech: ["Power BI", "Business Analysis", "Dashboard Design", "Strategy"],
-      description: "Developed a PESTEL-based dashboard and strategic analysis of Tesla and the electric vehicle market.",
-      impact: "Provided structured insights on regulatory, economic, and technological factors to support strategic decision-making and market positioning.",
-      github: "https://github.com/rsanmiguel2023/teslapesteldashboard",
-      live: null
-    },
-    {
-      title: "AI Security Scanner in Python",
-      category: "Cybersecurity • Python • Streamlit",
-      tech: ["Python", "Streamlit", "Cybersecurity", "Bandit", "Security Scanning"],
-      description: "Built a Python security scanning application to analyze code vulnerabilities, package risks, and security issues.",
-      impact: "Improved visibility into code vulnerabilities, enabling faster remediation and reducing potential security risks in development workflows.",
-      github: "https://github.com/rsanmiguel2023/ai-security-scanner-python",
-      live: "https://ai-security-scanner.streamlit.app/"
-    },
-    {
-      title: "Microsoft Stock Analytics Dashboard",
-      category: "Predictive Analytics • Streamlit",
-      tech: ["Python", "Pandas", "NumPy", "scikit-learn", "Streamlit"],
-      description: "Created an analytics dashboard for Microsoft stock data using technical indicators, model evaluation, and feature engineering.",
-      impact: "Enabled clearer interpretation of market signals and model outputs, supporting data-driven trading insights and risk awareness.",
-      github: "https://github.com/rsanmiguel2023/msanalyticsdashboard",
-      live: "https://msanalyticsdashboard.streamlit.app/"
-    },
-    {
       title: "UNFC Capstone Project: Profit Erosion Analytics",
-      category: "Capstone • Analytics • Streamlit",
-      tech: ["Python", "SQL", "BigQuery", "Machine Learning", "Streamlit"],
-      description: "Developed a capstone analytics project focused on profit erosion, customer risk, and business performance drivers.",
-      impact: "Identified high-risk customer segments and key drivers of loss, enabling targeted strategies to reduce profit erosion and improve financial performance.",
+      category: "Capstone • Analytics • BigQuery • Streamlit",
+      tech: ["Python", "SQL", "BigQuery", "Machine Learning", "Data Pipeline", "Streamlit"],
+      description: "Built an end-to-end analytics pipeline transforming 180K+ transaction records into structured datasets for customer risk analysis and predictive modeling.",
+      impact: "Developed predictive models achieving AUC = 0.9798 and identified high-risk customer segments driving profit erosion, supporting targeted financial performance improvement strategies.",
       github: "https://github.com/rsanmiguel2023/unfc-capstone-project",
       live: "https://profiterosionunfc.streamlit.app/"
     },
     {
       title: "Pastry Sales Forecasting",
-      category: "Forecasting • Machine Learning",
-      tech: ["Python", "Pandas", "NumPy", "scikit-learn", "XGBoost", "Streamlit"],
-      description: "Forecasted pastry demand using historical sales, weather, store, and holiday data.",
-      impact: "Improved demand planning accuracy, helping reduce overproduction and minimize inventory waste while optimizing daily production levels.",
+      category: "Forecasting • Machine Learning • Streamlit",
+      tech: ["Python", "Pandas", "NumPy", "scikit-learn", "XGBoost", "Time Series", "Streamlit"],
+      description: "Built a forecasting pipeline using historical sales, weather, store, and holiday data with lag and rolling features to predict pastry demand.",
+      impact: "Selected XGBoost with strong model performance, improving demand planning reliability and helping reduce overproduction, waste, and inventory inefficiencies.",
       github: "https://github.com/rsanmiguel2023/pastry-sales-forecasting-",
       live: "https://pastrysalesforecasting.streamlit.app/"
+    },
+    {
+      title: "Microsoft Stock Analytics Dashboard",
+      category: "Predictive Analytics • Financial Data • Streamlit",
+      tech: ["Python", "Pandas", "NumPy", "scikit-learn", "ROC-AUC", "Streamlit"],
+      description: "Created a stock analytics dashboard using technical indicators, volatility features, momentum features, model evaluation, and financial visual storytelling.",
+      impact: "Improved interpretation of market signals, model outputs, and risk behavior through interactive analytics designed for decision support.",
+      github: "https://github.com/rsanmiguel2023/msanalyticsdashboard",
+      live: "https://msanalyticsdashboard.streamlit.app/"
+    },
+    {
+      title: "Toronto Bike Sharing Analysis",
+      category: "Data Analysis • Visualization • Streamlit",
+      tech: ["Python", "Pandas", "NumPy", "Matplotlib", "EDA", "Streamlit"],
+      description: "Analyzed Toronto bike sharing patterns across time, usage behavior, and environmental conditions to identify operational demand trends.",
+      impact: "Identified usage patterns and demand drivers that can support resource planning, service availability, and operational decision-making.",
+      github: "https://github.com/rsanmiguel2023/torontobikesharinganalysis",
+      live: "https://torontobikesharinganalysis.streamlit.app/"
+    },
+    {
+      title: "AI Security Scanner in Python",
+      category: "Cybersecurity • Python • Streamlit",
+      tech: ["Python", "Streamlit", "Cybersecurity", "Bandit", "Security Scanning"],
+      description: "Built a Python security scanning application to analyze code vulnerabilities, package risks, and common security issues through a simple dashboard interface.",
+      impact: "Improved visibility into development security risks, enabling faster review, prioritization, and remediation of vulnerabilities.",
+      github: "https://github.com/rsanmiguel2023/ai-security-scanner-python",
+      live: "https://ai-security-scanner.streamlit.app/"
+    },
+    {
+      title: "Tesla PESTEL Dashboard",
+      category: "Business Analysis • Strategy • Dashboard",
+      tech: ["Power BI", "Business Analysis", "Dashboard Design", "PESTEL", "Strategy"],
+      description: "Developed a PESTEL-based dashboard and strategic analysis of Tesla and the electric vehicle market.",
+      impact: "Provided structured insights on external political, economic, social, technological, environmental, and legal factors affecting product development and market positioning.",
+      github: "https://github.com/rsanmiguel2023/teslapesteldashboard",
+      live: null
     }
   ];
 
@@ -80,43 +139,75 @@ export default function App() {
       role: "Data Engineer Intern",
       company: "Definity Financial Corporation, Toronto",
       period: "2025 – 2026",
-      text: "Supported Airflow and BigQuery pipelines in a Google Cloud Platform environment, investigated workflow failures, validated datasets using SQL and Python, and used Bitbucket version control workflows to support reliable reporting outputs."
+      text: "Supported cloud-based data pipelines, ETL workflows, Apache Airflow processes, BigQuery datasets, SQL/Python validation, workflow debugging, documentation, and production reporting reliability."
     },
     {
       role: "IT Group Head / IT Manager",
       company: "Century Properties Group",
       period: "2010 – 2022",
-      text: "Led enterprise IT operations across infrastructure, SAP ERP, Microsoft 365, cybersecurity, networking, and disaster recovery across multiple business units."
+      text: "Oversaw enterprise IT operations, infrastructure, SAP ERP environments, Microsoft 365, Exchange migration, IAM/RBAC governance, cybersecurity, reporting, vendor coordination, application development, and business systems modernization."
     },
     {
-      role: "Systems Administrator / Systems Engineer",
-      company: "Earlier Technical Roles",
-      period: "2004 – 2009",
-      text: "Delivered server, network, endpoint, and infrastructure support, ensuring stable enterprise environments and reliable system performance."
+      role: "Systems Administrator / IT Specialist",
+      company: "Century Properties Inc.",
+      period: "2005 – 2009",
+      text: "Managed Windows Server, Active Directory, Exchange, firewall, VPN, wireless network, RBAC, user access administration, infrastructure upgrades, and L1–L4 operational support."
+    },
+    {
+      role: "Systems Engineer",
+      company: "Imaginet International Inc.",
+      period: "2004 – 2005",
+      text: "Implemented server, network, firewall, Exchange, VoIP, and infrastructure solutions while resolving advanced technical escalations for enterprise clients."
     }
   ];
 
   const valueCards = [
     {
-      icon: <BarChart3 size={26} />,
-      title: "Analytics That Explain Business Problems",
-      text: "I connect data exploration, modeling, and reporting to business decisions, not just technical outputs."
+      icon: <Shield size={26} />,
+      title: "Enterprise Technology Leadership",
+      text: "19+ years across IT operations, infrastructure, Microsoft 365, cybersecurity, IAM, ERP, and business systems."
     },
     {
       icon: <Database size={26} />,
-      title: "Practical Data Workflows",
-      text: "Experience with SQL, Python, BigQuery, Airflow, and validation workflows for reliable reporting."
+      title: "Data & Analytics Execution",
+      text: "Recent hands-on experience with SQL, Python, BigQuery, Apache Airflow, ETL workflows, data validation, and machine learning projects."
     },
     {
-      icon: <Shield size={26} />,
-      title: "Enterprise Systems Background",
-      text: "19+ years across IT operations, Microsoft 365, infrastructure, cybersecurity, and business systems."
+      icon: <BarChart3 size={26} />,
+      title: "Business Reporting & Decision Support",
+      text: "Prepared KPI/KRA reports, dashboards, executive reporting materials, operational metrics analysis, and recommendations for leadership."
     },
     {
       icon: <Cloud size={26} />,
-      title: "Cloud & Version Control Exposure",
-      text: "Hands-on exposure to Google Cloud Platform, BigQuery, GitHub, and Bitbucket-based collaboration."
+      title: "Cloud, Systems & Governance",
+      text: "Experience with Google Cloud Platform, hybrid infrastructure, access governance, workflow modernization, and cross-functional delivery."
     }
+  ];
+
+  const enterpriseAreas = [
+    {
+      title: "Infrastructure & Operations",
+      text: "Managed Windows Server, Active Directory, Microsoft 365, Exchange, IIS, SQL Server, VPN, DNS, DHCP, backup/recovery, patching, and hybrid environments."
+    },
+    {
+      title: "Identity & Access Management",
+      text: "Owned RBAC administration, user provisioning and deprovisioning, access reviews, security groups, least privilege access, and identity governance initiatives."
+    },
+    {
+      title: "ERP & Business Systems",
+      text: "Led SAP ERP ECC 6.0 implementation across FI, CO, MM, WM, PS, BW, and RE-FX while coordinating requirements, workflow reviews, sign-offs, and user enablement."
+    },
+    {
+      title: "Data, Reporting & Analytics",
+      text: "Built dashboards, KPI/KRA reporting, operational metrics analysis, ETL workflows, predictive analytics models, and Streamlit dashboards."
+    }
+  ];
+
+  const certifications = [
+    "ISC2 Certified in Cybersecurity (CC)",
+    "MCSE – Microsoft Certified Systems Engineer",
+    "MCSA – Microsoft Certified Systems Administrator",
+    "MCDBA – Microsoft Certified Database Administrator"
   ];
 
   return (
@@ -126,6 +217,7 @@ export default function App() {
           <a className="logo" href="#top">RSM</a>
           <div className="nav-links">
             <a href="#about">About</a>
+            <a href="#enterprise">Enterprise</a>
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
@@ -134,10 +226,10 @@ export default function App() {
 
         <section id="top" className="hero-content">
           <div className="hero-copy">
-            <p className="eyebrow">Data Analytics • BI • Data Engineering • IT Systems</p>
+            <p className="eyebrow">Enterprise Technology • Infrastructure • IAM • ERP • Data & Analytics</p>
             <h1>Roberto San Miguel</h1>
             <p className="hero-subtitle">
-              Data and Analytics professional with 19+ years in enterprise systems, now specializing in predictive analytics, dashboards, and data-driven decision support.
+              Enterprise technology professional with extensive experience across infrastructure operations, business systems, ERP implementation, cybersecurity, identity and access management, cloud platforms, and analytics-driven process improvement.
             </p>
 
             <div className="hero-actions">
@@ -145,7 +237,7 @@ export default function App() {
                 View Projects <ExternalLink size={17} />
               </a>
               <a className="btn secondary" href="https://github.com/rsanmiguel2023" target="_blank" rel="noreferrer">
-                GitHub 
+                GitHub
               </a>
             </div>
           </div>
@@ -153,14 +245,14 @@ export default function App() {
           <div className="hero-card">
             <div className="status-dot"></div>
             <p className="card-label">Portfolio Focus</p>
-            <h2>Business-focused analytics backed by enterprise IT experience.</h2>
+            <h2>Enterprise systems experience strengthened by modern analytics, cloud, and reporting projects.</h2>
             <div className="mini-grid">
+              <span>IAM</span>
+              <span>ERP</span>
               <span>Python</span>
               <span>SQL</span>
               <span>BigQuery</span>
               <span>Power BI</span>
-              <span>Streamlit</span>
-              <span>GCP</span>
             </div>
           </div>
         </section>
@@ -170,28 +262,41 @@ export default function App() {
         <section id="about" className="section two-column">
           <div>
             <p className="section-kicker">About</p>
-            <h2>A portfolio built around real projects and usable business outcomes.</h2>
+            <h2>A portfolio built around enterprise systems, analytics, and business outcomes.</h2>
           </div>
           <div className="text-block">
             <p>
-              I am a Data and Analytics professional with 19+ years of experience in enterprise IT systems, now focused on building practical analytics solutions that drive business decisions.
+              I am an enterprise technology and analytics professional with extensive hands-on experience managing infrastructure, identity systems, ERP platforms, cybersecurity controls, reporting workflows, and business systems.
             </p>
             <p>
-              My background spans infrastructure, cybersecurity, ERP systems, Microsoft 365, and large-scale operations. I transitioned into data analytics to apply this experience toward solving business problems using data, predictive modeling, and interactive dashboards.
+              My background bridges technical operations and business needs through requirements gathering, workflow analysis, stakeholder coordination, operational reporting, process improvement, and system implementation support.
             </p>
             <p>
-              I specialize in Python, SQL, BigQuery, Google Cloud Platform, NumPy, Pandas, Matplotlib, Streamlit, Power BI, Tableau, GitHub, and Bitbucket.
+              I also bring recent practical experience in data engineering and analytics, including Apache Airflow, BigQuery, SQL, Python, ETL workflows, data validation, machine learning projects, and interactive dashboards.
             </p>
           </div>
         </section>
 
         <section className="section">
           <p className="section-kicker">How I Deliver Value</p>
-          <h2>Practical analytics with enterprise context.</h2>
+          <h2>Technology leadership with hands-on analytics execution.</h2>
           <div className="value-grid">
             {valueCards.map((item) => (
               <article className="value-card" key={item.title}>
                 <div className="icon-wrap">{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="enterprise" className="section">
+          <p className="section-kicker">Enterprise Experience</p>
+          <h2>Bridging enterprise operations, systems, governance, and analytics.</h2>
+          <div className="value-grid">
+            {enterpriseAreas.map((item) => (
+              <article className="value-card" key={item.title}>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </article>
@@ -223,7 +328,7 @@ export default function App() {
               <h2>Selected work</h2>
             </div>
             <p>
-              Live dashboards and GitHub repositories focused on forecasting, business intelligence, cybersecurity, financial analytics, and operational decision support.
+              Live dashboards and GitHub repositories focused on forecasting, business intelligence, cybersecurity, financial analytics, data pipelines, and operational decision support.
             </p>
           </div>
 
@@ -278,13 +383,25 @@ export default function App() {
           </div>
         </section>
 
+        <section className="section">
+          <p className="section-kicker">Certifications</p>
+          <h2>Professional certifications</h2>
+          <div className="skills-grid">
+            {certifications.map((cert) => (
+              <article className="skill-card" key={cert}>
+                <h3>{cert}</h3>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section id="contact" className="section contact-section">
           <div className="contact-card">
             <div>
               <p className="section-kicker">Contact</p>
               <h2>Let’s build something useful.</h2>
               <p>
-                Open to opportunities in data analytics, BI, reporting, data engineering support, business systems, and technology operations.
+                Open to opportunities across enterprise technology, IT operations, IAM, business systems, data analytics, BI, reporting, and data engineering support.
               </p>
             </div>
 
@@ -293,10 +410,10 @@ export default function App() {
                 <Mail size={17} /> Email Me
               </a>
               <a className="btn secondary" href="https://github.com/rsanmiguel2023" target="_blank" rel="noreferrer">
-                 GitHub
+                GitHub
               </a>
               <a className="btn secondary" href="https://www.linkedin.com/in/rsanmiguel2025" target="_blank" rel="noreferrer">
-                 LinkedIn
+                LinkedIn
               </a>
             </div>
           </div>
