@@ -34,6 +34,16 @@ export default function App() {
       "Identity Governance",
       "Permission Management"
     ],
+    "Technology Governance & Risk": [
+      "Technology Lifecycle Management",
+      "End-of-Life Governance",
+      "IT Asset Management",
+      "Vulnerability Management",
+      "Compliance Monitoring",
+      "Technology Risk",
+      "Remediation Tracking",
+      "Executive Reporting"
+    ],
     "Cybersecurity & Governance": [
       "Microsoft Defender",
       "Firewall Administration",
@@ -63,6 +73,7 @@ export default function App() {
       "Pandas",
       "NumPy",
       "Matplotlib",
+      "Plotly",
       "scikit-learn"
     ],
     "Cloud & Tools": [
@@ -79,6 +90,24 @@ export default function App() {
 
   const projects = [
     {
+      title: "Technology Lifecycle Governance Dashboard",
+      category: "Technology Risk • EOL Governance • Streamlit",
+      tech: [
+        "Python",
+        "Streamlit",
+        "Pandas",
+        "Plotly",
+        "Power BI",
+        "Data Engineering",
+        "Risk Analytics",
+        "IT Asset Management"
+      ],
+      description: "Executive technology risk and lifecycle governance dashboard built for a synthetic banking environment, with visibility into hardware, software, vulnerability, compliance, and operational risk exposure across enterprise technology assets.",
+      impact: "Designed CMDB-style asset datasets, EOL and feature engineering pipelines, governance KPIs, lifecycle risk scoring, remediation tracking, refresh planning forecasts, and Power BI-ready reporting outputs for executive technology risk management.",
+      github: "https://github.com/rsanmiguel2023/technology-eol-lifecycle-dashboard",
+      live: "https://technology-eol-lifecycle.streamlit.app/"
+    },
+    {
       title: "UNFC Capstone Project: Profit Erosion Analytics",
       category: "Capstone • Analytics • BigQuery • Streamlit",
       tech: ["Python", "SQL", "BigQuery", "Machine Learning", "Data Pipeline", "Streamlit"],
@@ -86,6 +115,33 @@ export default function App() {
       impact: "Developed predictive models achieving AUC = 0.9798 and identified high-risk customer segments driving profit erosion, supporting targeted financial performance improvement strategies.",
       github: "https://github.com/rsanmiguel2023/unfc-capstone-project",
       live: "https://profiterosionunfc.streamlit.app/"
+    },
+    {
+      title: "AI Security Scanner in Python",
+      category: "Cybersecurity • Python • Streamlit",
+      tech: ["Python", "Streamlit", "Cybersecurity", "Bandit", "Security Scanning"],
+      description: "Built a Python security scanning application to analyze code vulnerabilities, package risks, and common security issues through a simple dashboard interface.",
+      impact: "Improved visibility into development security risks, enabling faster review, prioritization, and remediation of vulnerabilities.",
+      github: "https://github.com/rsanmiguel2023/ai-security-scanner-python",
+      live: "https://ai-security-scanner.streamlit.app/"
+    },
+    {
+      title: "Data Engineering & Cloud Pipeline Projects",
+      category: "Data Engineering • GCP • Airflow",
+      tech: ["Google Cloud Platform", "BigQuery", "Apache Airflow", "Cloud Composer", "Python", "SQL", "Git", "Bitbucket"],
+      description: "Supported production ETL workflows, cloud-based data pipelines, workflow debugging, SQL/Python validation, and reporting reliability in a large Canadian insurance environment.",
+      impact: "Modernized and supported pipeline execution by updating Airflow workflows, investigating workflow failures, validating transformed datasets, documenting dependencies, and reducing reporting disruption risk.",
+      github: "https://github.com/rsanmiguel2023",
+      live: null
+    },
+    {
+      title: "Toronto Bike Sharing Analysis",
+      category: "Data Analysis • Visualization • Streamlit",
+      tech: ["Python", "Pandas", "NumPy", "Matplotlib", "EDA", "Streamlit"],
+      description: "Analyzed Toronto bike sharing patterns across time, usage behavior, and environmental conditions to identify operational demand trends.",
+      impact: "Identified usage patterns and demand drivers that can support resource planning, service availability, and operational decision-making.",
+      github: "https://github.com/rsanmiguel2023/torontobikesharinganalysis",
+      live: "https://torontobikesharinganalysis.streamlit.app/"
     },
     {
       title: "Pastry Sales Forecasting",
@@ -104,24 +160,6 @@ export default function App() {
       impact: "Improved interpretation of market signals, model outputs, and risk behavior through interactive analytics designed for decision support.",
       github: "https://github.com/rsanmiguel2023/msanalyticsdashboard",
       live: "https://msanalyticsdashboard.streamlit.app/"
-    },
-    {
-      title: "Toronto Bike Sharing Analysis",
-      category: "Data Analysis • Visualization • Streamlit",
-      tech: ["Python", "Pandas", "NumPy", "Matplotlib", "EDA", "Streamlit"],
-      description: "Analyzed Toronto bike sharing patterns across time, usage behavior, and environmental conditions to identify operational demand trends.",
-      impact: "Identified usage patterns and demand drivers that can support resource planning, service availability, and operational decision-making.",
-      github: "https://github.com/rsanmiguel2023/torontobikesharinganalysis",
-      live: "https://torontobikesharinganalysis.streamlit.app/"
-    },
-    {
-      title: "AI Security Scanner in Python",
-      category: "Cybersecurity • Python • Streamlit",
-      tech: ["Python", "Streamlit", "Cybersecurity", "Bandit", "Security Scanning"],
-      description: "Built a Python security scanning application to analyze code vulnerabilities, package risks, and common security issues through a simple dashboard interface.",
-      impact: "Improved visibility into development security risks, enabling faster review, prioritization, and remediation of vulnerabilities.",
-      github: "https://github.com/rsanmiguel2023/ai-security-scanner-python",
-      live: "https://ai-security-scanner.streamlit.app/"
     },
     {
       title: "Tesla PESTEL Dashboard",
@@ -194,6 +232,10 @@ export default function App() {
       text: "Owned RBAC administration, user provisioning and deprovisioning, access reviews, security groups, least privilege access, and identity governance initiatives."
     },
     {
+      title: "Technology Lifecycle Governance",
+      text: "Built EOL-focused governance analytics covering lifecycle exposure, vulnerability risk, compliance status, remediation tracking, refresh planning, and executive reporting."
+    },
+    {
       title: "ERP & Business Systems",
       text: "Led SAP ERP ECC 6.0 implementation across FI, CO, MM, WM, PS, BW, and RE-FX while coordinating requirements, workflow reviews, sign-offs, and user enablement."
     },
@@ -226,10 +268,10 @@ export default function App() {
 
         <section id="top" className="hero-content">
           <div className="hero-copy">
-            <p className="eyebrow">Enterprise Technology • Infrastructure • IAM • ERP • Data & Analytics</p>
+            <p className="eyebrow">Enterprise Technology • Risk & Governance • IAM • ERP • Data & Analytics</p>
             <h1>Roberto San Miguel</h1>
             <p className="hero-subtitle">
-              Enterprise technology professional with extensive experience across infrastructure operations, business systems, ERP implementation, cybersecurity, identity and access management, cloud platforms, and analytics-driven process improvement.
+              Enterprise technology professional with extensive experience across infrastructure operations, technology lifecycle governance, business systems, ERP implementation, cybersecurity, identity and access management, cloud platforms, and analytics-driven process improvement.
             </p>
 
             <div className="hero-actions">
@@ -245,12 +287,12 @@ export default function App() {
           <div className="hero-card">
             <div className="status-dot"></div>
             <p className="card-label">Portfolio Focus</p>
-            <h2>Enterprise systems experience strengthened by modern analytics, cloud, and reporting projects.</h2>
+            <h2>Enterprise systems experience strengthened by technology risk, governance, cloud, and analytics projects.</h2>
             <div className="mini-grid">
+              <span>EOL</span>
               <span>IAM</span>
               <span>ERP</span>
               <span>Python</span>
-              <span>SQL</span>
               <span>BigQuery</span>
               <span>Power BI</span>
             </div>
@@ -262,14 +304,14 @@ export default function App() {
         <section id="about" className="section two-column">
           <div>
             <p className="section-kicker">About</p>
-            <h2>A portfolio built around enterprise systems, analytics, and business outcomes.</h2>
+            <h2>A portfolio built around enterprise systems, governance, analytics, and business outcomes.</h2>
           </div>
           <div className="text-block">
             <p>
-              I am an enterprise technology and analytics professional with extensive hands-on experience managing infrastructure, identity systems, ERP platforms, cybersecurity controls, reporting workflows, and business systems.
+              I am an enterprise technology and analytics professional with extensive hands-on experience managing infrastructure, identity systems, ERP platforms, cybersecurity controls, reporting workflows, technology governance, and business systems.
             </p>
             <p>
-              My background bridges technical operations and business needs through requirements gathering, workflow analysis, stakeholder coordination, operational reporting, process improvement, and system implementation support.
+              My background bridges technical operations and business needs through requirements gathering, workflow analysis, stakeholder coordination, operational reporting, process improvement, technology lifecycle governance, and system implementation support.
             </p>
             <p>
               I also bring recent practical experience in data engineering and analytics, including Apache Airflow, BigQuery, SQL, Python, ETL workflows, data validation, machine learning projects, and interactive dashboards.
@@ -328,7 +370,7 @@ export default function App() {
               <h2>Selected work</h2>
             </div>
             <p>
-              Live dashboards and GitHub repositories focused on forecasting, business intelligence, cybersecurity, financial analytics, data pipelines, and operational decision support.
+              Live dashboards and GitHub repositories focused on technology lifecycle governance, risk analytics, forecasting, business intelligence, cybersecurity, financial analytics, data pipelines, and operational decision support.
             </p>
           </div>
 
@@ -401,7 +443,7 @@ export default function App() {
               <p className="section-kicker">Contact</p>
               <h2>Let’s build something useful.</h2>
               <p>
-                Open to opportunities across enterprise technology, IT operations, IAM, business systems, data analytics, BI, reporting, and data engineering support.
+                Open to opportunities across enterprise technology, technology risk and governance, IT operations, IAM, business systems, data analytics, BI, reporting, and data engineering support.
               </p>
             </div>
 
