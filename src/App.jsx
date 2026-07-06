@@ -90,6 +90,30 @@ export default function App() {
 
   const projects = [
     {
+      title: "Enterprise ML Defect Detection Platform",
+      category: "Machine Learning • MLOps • Google Cloud • FastAPI",
+      tech: [
+        "Python",
+        "FastAPI",
+        "TensorFlow",
+        "PyTorch",
+        "Docker",
+        "Google Cloud Run",
+        "Cloud Storage",
+        "Terraform",
+        "GitHub Actions",
+        "Pytest",
+        "Ruff",
+        "Black"
+      ],
+      description: "Designed and built a production-oriented machine learning platform for industrial visual inspection, combining TensorFlow and PyTorch inference pipelines with FastAPI, Docker, Terraform, GitHub Actions, and Google Cloud deployment.",
+      impact: "Delivered an end-to-end ML engineering project with model versioning, REST API inference, batch prediction, Infrastructure as Code, CI/CD validation, security controls, observability, performance benchmarking, and production operations documentation.",
+      github: "https://github.com/rsanmiguel2023/ml-defect-detection-gcp-docker",
+      live: null,
+      caseStudy: "https://github.com/rsanmiguel2023/ml-defect-detection-gcp-docker/blob/main/portfolio/Portfolio_Case_Study.md",
+      docs: "https://github.com/rsanmiguel2023/ml-defect-detection-gcp-docker/tree/main/docs"
+    },
+    {
       title: "Technology Lifecycle Governance Dashboard",
       category: "Technology Risk • EOL Governance • Streamlit",
       tech: [
@@ -268,7 +292,7 @@ export default function App() {
 
         <section id="top" className="hero-content">
           <div className="hero-copy">
-            <p className="eyebrow">Enterprise Technology • Risk & Governance • IAM • ERP • Data & Analytics</p>
+            <p className="eyebrow">Enterprise Technology • MLOps • Cloud • Cybersecurity • Data & Analytics</p>
             <h1>Roberto San Miguel</h1>
             <p className="hero-subtitle">
               Enterprise technology professional with extensive experience across infrastructure operations, technology lifecycle governance, business systems, ERP implementation, cybersecurity, identity and access management, cloud platforms, and analytics-driven process improvement.
@@ -289,12 +313,12 @@ export default function App() {
             <p className="card-label">Portfolio Focus</p>
             <h2>Enterprise systems experience strengthened by technology risk, governance, cloud, and analytics projects.</h2>
             <div className="mini-grid">
-              <span>EOL</span>
-              <span>IAM</span>
-              <span>ERP</span>
+              <span>MLOps</span>
+              <span>GCP</span>
+              <span>FastAPI</span>
+              <span>Terraform</span>
               <span>Python</span>
-              <span>BigQuery</span>
-              <span>Power BI</span>
+              <span>Security</span>
             </div>
           </div>
         </section>
@@ -370,7 +394,7 @@ export default function App() {
               <h2>Selected work</h2>
             </div>
             <p>
-              Live dashboards and GitHub repositories focused on technology lifecycle governance, risk analytics, forecasting, business intelligence, cybersecurity, financial analytics, data pipelines, and operational decision support.
+              Selected projects across MLOps, cloud engineering, technology lifecycle governance, risk analytics, cybersecurity, data pipelines, forecasting, business intelligence, and operational decision support.
             </p>
           </div>
 
@@ -399,6 +423,16 @@ export default function App() {
                   {project.live && (
                     <a href={project.live} target="_blank" rel="noreferrer">
                       <ExternalLink size={16} /> Live App
+                    </a>
+                  )}
+                  {project.caseStudy && (
+                    <a href={project.caseStudy} target="_blank" rel="noreferrer">
+                      Case Study
+                    </a>
+                  )}
+                  {project.docs && (
+                    <a href={project.docs} target="_blank" rel="noreferrer">
+                      Docs
                     </a>
                   )}
                 </div>
